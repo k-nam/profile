@@ -1,0 +1,38 @@
+<%= javascript_tag do %>
+    var body = document.getElementsByTagName("BODY")[0];    
+    body.style.backgroundImage = "url('/assets/bg/bg_05.jpg')";
+<% end %>
+
+<div class="container" style="height:54vw;">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 style="margin:10 0; display:inline-block">Welcome to my website!</h1>
+            <h1 style="margin:10 0; display:inline-block; float:right">Go to somewhere else.</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+           <h2>Biography</h2>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3">
+           <img style="width:100%" src="<%= image_url('profile.png') %>">
+
+        </div>
+        <div class="col-xs-9">
+            <p>I am a South Korean software engineer. I was born in Po-hang in 1983. I majored in Business Administration
+            and Computer science at Seoul National University. My hobby is watching television dramas, photographing, and playing guitar.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6">
+        abc
+        </div>
+        <div class="col-xs-6">
+        def
+        </div>
+    </div>
+</div>
