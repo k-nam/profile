@@ -21,72 +21,30 @@
     <div class="row" style="padding:10px 0">
         <div class="col-xs-12 col-lg-3">
             <h2 style="border-bottom:solid 2px">Biography</h2>
-            <img style="width:100px" src="<%= image_url('profile/profile_03.jpg') %>"/>
+            <img style="width:100%" src="<%= image_url('profile/profile_03.jpg') %>"/>
             <div style="margin-top:10px;">
-                <p class="my-p">My name is 남기웅 (南基雄, KEEWOONG NAM). Calvin Caulfield is my english nickname. </p>
-                <p class="my-p">I am a South Korean software engineer. I majored in Business Administration
+                <p>My name is 남기웅 (南基雄, KEEWOONG NAM). Calvin Caulfield is my english nickname. </p>
+                <p>I am a South Korean software engineer. I majored in Business Administration
                 and Computer science at Seoul National University. I started to work at <a href="http://www.naver.com" target="_blank">NAVER</a> after graduation, and later at other places as software engineer or instructor.</p>
-                <p class="my-p">My hobby is watching television dramas, photographing, and playing guitar.</p>
+                <p>My hobby is watching television dramas, photographing, and playing guitar.</p>
             </div>
         </div>
         <div class="col-xs-12 col-lg-9">
             <h2 style="border-bottom:solid 2px">Portfolio</h2>
-            <div class="table-responsive">
-             <table class="table">
-                <thead>
-                <tr>
-                    <th width="150px">Title (Github)</th>
-                    <th>Description</th>
-                    <th>Service website</th>
-            
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><a target="_blank" href="https://github.com/calvincaulfield/lib_calvin">lib_calvin</a></td>
-                    <td>C++ implementation of fundamental algorithms and data structures. It is focused primarily on performance, 
-                    and most of implemented functions are benchmarked against other C++ libraries such as STL, boost, and Google's.
-                    </td>                    
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://github.com/calvincaulfield/algorithm-benchmark">algorithm-benchmark</a></td>
-                    <td>Rails based website showing the result of performance benchmarks of lib_calvin.
-                    It is designed to provide effective visual representation of benchmark data, 
-                    so that the purpose of data, which is to compare algorithms on multiple dimensions, is best achieved.
-                    </td>
-                    <td><a target="_blank" href="http://bench.minami.im">algorithm-benchmark</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://github.com/calvincaulfield/swordmaster">swordmaster</a></td>
-                    <td>Unity3d based RPG game in which many important elements of Unity engine have been used.
-                    Player character and NPC's are pure 3d objects, so they are under physics engine's influence. 
-                    Each enemy's movement patterns are designed uniquely so that the game is appropriately challanging.
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://github.com/calvincaulfield/drama-explorer">drama-explorer</a></td>
-                    <td>Content based web application made with Rails. As the name 'explorer' suggests, 
-                    this website was designed to make it easy for users to navigate through dramas without manually 
-                    entering search keywords. To achieve this, I focused on the tendency that many people like to 
-                    watch dramas in which their favorite actors take part. Being a responsive wep application makes
-                    it more attractive to be able to explore dramas by just clicking.
-                    </td>
-                    <td><a target="_blank" href="http://drama.minami.im">http://drama.minami.im</a></td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://github.com/calvincaulfield/swordmaster">swordmaster</a></td>
-                    <td>Unity3d based RPG game in which many important elements of Unity engine have been used.
-                    Player character and NPC's are pure 3d objects, so they are under physics engine's influence. 
-                    Each enemy's movement patterns are designed uniquely so that the game is appropriately challanging.
-                    </td>
-                    <td></td>
-                </tr>
-
-                </tbody>
-            </table>
-            </div>
+            <% Work.all.each do |work| %>
+                <div class="row" style="margin-bottom:20px;">
+                    <div class="col-xs-12 col-lg-3">
+                        <h3 style="display:inline-block;border-bottom:solid 0px"><%= work.title %></h3>
+                    </div>
+                    <div class="col-xs-12 col-lg-6">
+                        <p><%= work.desc %></p>
+                    </div>
+                    <div class="col-xs-12 col-lg-3">
+                        <p><a target="_blank" href="https://github.com/calvincaulfield/<%= work.title %>">GitHub</a></p>
+                        <p><a target="_blank" href="<%= work.link %>"><%= work.link %></a></p>                        
+                    </div>
+                </div>            
+            <% end %>
         </div>
     </div>
 
