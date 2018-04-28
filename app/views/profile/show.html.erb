@@ -1,7 +1,7 @@
 <%= javascript_tag do %>
     var body = document.getElementsByTagName("BODY")[0];    
     //body.style.backgroundImage = "url('/assets/bg/bg_14.jpg')";
-    body.style.backgroundColor = "#AED6F1";
+    body.style.backgroundColor = "#d6dbdf ";
 <% end %>
 
 <div class="container-fluid " style="height:54vw; "">
@@ -25,19 +25,19 @@
             <div style="margin-top:10px;">
                 <p>My name is 남기웅 (南基雄, KEEWOONG NAM). Calvin Caulfield is my english nickname. </p>
                 <p>I am a South Korean software engineer. I majored in Business Administration
-                and Computer science at Seoul National University. I started to work at <a href="http://www.naver.com" target="_blank">NAVER</a> after graduation, and later at other places as software engineer or instructor.</p>
+                and Computer science at Seoul National University. I started to work at NAVER after graduation, and later at other places as software engineer or instructor.</p>
                 <p>My hobby is watching television dramas, photographing, and playing guitar.</p>
             </div>
         </div>
         <div class="col-xs-12 col-lg-9">
             <h2 style="border-bottom:solid 2px">Portfolio</h2>
-            <% Work.all.each do |work| %>
+            <% Work.all.sort_by { |x| x.created_at }.each do |work| %>
                 <div class="row" style="margin-bottom:20px;">
                     <div class="col-xs-12 col-lg-3">
                         <h3 style="display:inline-block;border-bottom:solid 0px"><%= work.title %></h3>
                     </div>
                     <div class="col-xs-12 col-lg-6">
-                        <p><%= work.desc %></p>
+                        <p><%= work.desc.html_safe %></p>
                     </div>
                     <div class="col-xs-12 col-lg-3">
                         <p><a target="_blank" href="https://github.com/calvincaulfield/<%= work.title %>">GitHub</a></p>
