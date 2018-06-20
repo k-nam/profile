@@ -20,27 +20,42 @@
 
     <div class="row" style="padding:10px 0">
         <div class="col-xs-12 col-lg-3">
-            <h2 style="border-bottom:solid 2px">Biography</h2>
-            <img style="width:100%" src="<%= image_url('profile/profile_03.jpg') %>"/>
-            <div style="margin-top:10px;">
-                <p>My name is 남기웅 (南基雄, KEEWOONG NAM). Calvin Caulfield is my English nickname. </p>
-                <p>I am a South Korean software engineer. I majored in Business Administration
-                and Computer science at Seoul National University. I started to work at NAVER after graduation, and later at other places as software engineer or instructor.</p>
-                <p>My hobby is watching television dramas, photographing, and playing guitar.</p>
+            <div class="row" style="margin-bottom:20px; ">
+                <div class="col-xs-12 col-lg-12 ">
+                    <h2 >Biography</h2>
+                </div>                
+            </div>
+
+            <div class="row row-bordered" style="margin-bottom:20px; ">
+                <div class="col-xs-12 col-lg-12 ">
+                <p><%= Biography.all.first .introduction %></p>
+                </div>                
+            </div>
+
+            <div class="row row-bordered" style="margin-bottom:20px; ">
+                <div class="col-xs-12 col-lg-12 ">
+                 <img style="width:100%" src="<%= image_url('profile/profile_04.jpg') %>"/>
+                </div>                
             </div>
         </div>
         <div class="col-xs-12 col-lg-9">
-            <h2 style="border-bottom:solid 2px">Portfolio</h2>
+            <div class="row " style="margin-bottom:20px; ">
+                <div class="col-xs-12 col-lg-12 ">
+                    <h2 >Portfolio</h2>
+                </div>                
+            </div>
             <% Work.all.sort_by { |x| x.created_at }.each do |work| %>
-                <div class="row" style="margin-bottom:20px;">
-                    <div class="col-xs-12 col-lg-3">
-                        <h3 style="display:inline-block;border-bottom:solid 0px"><%= work.title %></h3>
+                <div class="row row-bordered" style="margin-bottom:20px; ">
+                    <div class="col-xs-12 col-lg-3 ">
+                        <h3 style="margin-top: 0px;display:inline-block;"><%= work.title %></h3>
                     </div>
-                    <div class="col-xs-12 col-lg-6">
+                    <div class="col-xs-12 col-lg-6 ">
                         <p><%= work.desc.html_safe %></p>
                     </div>
-                    <div class="col-xs-12 col-lg-3">
+                    <div class="col-xs-12 col-lg-1">
                         <p><a target="_blank" href="https://github.com/calvincaulfield/<%= work.title %>">GitHub</a></p>
+                    </div>
+                    <div class="col-xs-12 col-lg-2 ">
                         <p><a target="_blank" href="<%= work.link %>"><%= work.link %></a></p>                        
                     </div>
                 </div>            

@@ -1,0 +1,74 @@
+<%= javascript_tag do %>
+  var body = document.getElementsByTagName("BODY")[0];    
+  //body.style.backgroundImage = "url('/assets/bg/bg_14.jpg')";
+  body.style.backgroundColor = "#d6dbdf ";
+<% end %>
+
+<div class="container-fluid " style="height:54vw; "">
+  <div class="row"> 
+      <div class="col-xs-12">
+          <h1 style="margin:10px 0; display:inline-block">Welcome to my website!</h1>
+          <h1 style="margin:10px 0; display:inline-block; float:right"> </h1>
+      </div>
+  </div>
+
+  <div class="row" style="border-bottom:solid 0px">
+      <div class="col-xs-12">
+         
+      </div>
+  </div>
+
+  <div class="row" style="padding:10px 0">
+      <div class="col-xs-12 col-lg-3">
+          <div class="row" style="margin-bottom:20px; ">
+              <div class="col-xs-12 col-lg-12 ">
+                  <h2 >Biography</h2>
+              </div>                
+          </div>
+
+          <div class="row row-bordered" style="margin-bottom:20px; ">
+              <div class="col-xs-12 col-lg-12 ">
+              <p><%= @welcome.introduction %></p>
+              </div>                
+          </div>
+
+          <div class="row row-bordered" style="margin-bottom:20px; ">
+              <div class="col-xs-12 col-lg-12 ">
+               <img style="width:100%" src="<%= @welcome.portrait_url %>"/>
+              </div>                
+          </div>
+      </div>
+      <div class="col-xs-12 col-lg-9">
+          <div class="row " style="margin-bottom:20px; ">
+              <div class="col-xs-12 col-lg-12 ">
+                  <h2 >Portfolio</h2>
+              </div>                
+          </div>
+          <% Work.all.sort_by { |x| x.created_at }.each do |work| %>
+              <div class="row row-bordered" style="margin-bottom:20px; ">
+                  <div class="col-xs-12 col-lg-3 ">
+                      <h3 style="margin-top: 0px;display:inline-block;"><%= work.title %></h3>
+                  </div>
+                  <div class="col-xs-12 col-lg-6 ">
+                      <p><%= work.desc.html_safe %></p>
+                  </div>
+                  <div class="col-xs-12 col-lg-1">
+                      <p><a target="_blank" href="https://github.com/calvincaulfield/<%= work.title %>">GitHub</a></p>
+                  </div>
+                  <div class="col-xs-12 col-lg-2 ">
+                      <p><a target="_blank" href="<%= work.link %>"><%= work.link %></a></p>                        
+                  </div>
+              </div>            
+          <% end %>
+      </div>
+  </div>
+
+
+
+  <div class="row">
+      <div class="col-xs-12">
+         
+      </div>
+
+  </div>
+</div>

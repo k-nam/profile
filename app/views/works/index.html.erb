@@ -5,18 +5,27 @@
 <table>
   <thead>
     <tr>
+    
+      <th>order</th>
       <th>Title</th>
+      <th>Category</th>
       <th>Desc</th>
+      <th>Category Japan</th>
+      <th>Desc Japan</th>
       <th>Link</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @works.each do |work| %>
+    <% @works.sort_by { |x| x.order } .each do |work| %>
       <tr>
+        <td><%= work.order %></td>
         <td><%= work.title %></td>
+        <td><%= work.category %></td>
         <td><%= work.desc %></td>
+        <td><%= work.category_japan %></td>
+        <td><%= work.desc_japan %></td>
         <td><%= work.link %></td>
         <td><%= link_to 'Show', work %></td>
         <td><%= link_to 'Edit', edit_work_path(work) %></td>

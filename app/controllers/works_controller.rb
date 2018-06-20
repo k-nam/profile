@@ -42,7 +42,7 @@ class WorksController < ApplicationController
     private
         def work_params
             params.require(:work).permit(
-                :title, :desc, :link
+                :order, :title, :category, :category_japan, :desc, :desc_japan, :link
             )
         end
 end

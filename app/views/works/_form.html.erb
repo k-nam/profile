@@ -12,13 +12,33 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :order %>
+    <%= form.number_field :order %>
+  </div>
+
+  <div class="field">
     <%= form.label :title %>
     <%= form.text_area :title, id: :work_title %>
   </div>
 
   <div class="field">
+    <%= form.label :category %>
+    <%= form.text_area :category, id: :work_category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_japan %>
+    <%= form.text_area :category_japan, id: :work_category %>
+  </div>
+
+  <div class="field">
     <%= form.label :desc %>
     <%= form.text_area :desc, id: :work_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desc_japan %>
+    <%= form.text_area :desc_japan, id: :work_desc %>
   </div>
 
   <div class="field">
