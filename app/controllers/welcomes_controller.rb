@@ -69,6 +69,6 @@ class WelcomesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def welcome_params
-      params.require(:welcome).permit(:introduction, :portrait_url)
+      params.require(:welcome).permit(:introduction, :introduction_japan, :portrait_url)
     end
 end
