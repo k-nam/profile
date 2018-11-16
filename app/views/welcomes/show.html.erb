@@ -28,7 +28,7 @@
   
             <div class="row row-bordered" style="margin-bottom:20px; ">
                 <div class="col-xs-12 col-lg-12 ">
-                <p><%= if is_japan then @welcome.introduction_japan.html_safe else @welcome.introduction.html_safe end %></p>
+                <%= if is_japan then @welcome.introduction_japan.html_safe else @welcome.introduction.html_safe end %>
                 </div>                
             </div>
   

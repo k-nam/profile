@@ -61,3 +61,5 @@ gem 'bootstrap-sass', '~> 3.3.7'
 
 
 gem 'chartjs-ror'
+
+gem "rack", ">= 2.0.6"
