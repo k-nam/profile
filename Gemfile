@@ -58,7 +58,7 @@ gem 'mysql2'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 gem 'jquery-rails'
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 
 gem 'chartjs-ror'
