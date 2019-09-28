@@ -1,0 +1,185 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2018-03-28 11:11:57.657199'
+    - '2018-03-28 11:11:57.657199'
+
+---
+biographies:
+  columns:
+  - id
+  - introduction
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - I am ki
+    - '2018-06-18 09:11:51.809735'
+    - '2018-06-18 09:11:51.809735'
+  - - 2
+    - d
+    - '2018-06-18 09:16:55.760373'
+    - '2018-06-18 09:16:55.760373'
+  - - 3
+    - d
+    - '2018-06-18 09:20:30.5444'
+    - '2018-06-18 09:20:30.5444'
+
+---
+welcomes:
+  columns:
+  - id
+  - introduction
+  - portrait_url
+  - created_at
+  - updated_at
+  - introduction_japan
+  records: 
+  - - 1
+    - "My name is 남기웅 (南基雄, NAM KEEWOONG). Calvin Caulfield is my English nickname.<br>\r\nI
+      am a South Korean software engineer. I majored in Business Administration\r\nand
+      Computer science at Seoul National University. I started to work at NAVER after
+      graduation, and later at other places as software engineer or instructor.<br>\r\nMy
+      hobby is watching television dramas, photographing, and playing guitar."
+    - https://s3-ap-northeast-1.amazonaws.com/calvin-profile/%EC%82%AC%EC%BD%94%EC%B4%AC%EC%98%81+20180618+%EC%98%A4%EC%98%A4%EC%BF%A0%EB%B3%B4+%EC%B9%B4%ED%8E%98.jpg
+    - '2018-06-20 06:41:07.114893'
+    - '2018-09-29 08:17:26.218225'
+    - "<p>こんにちは。南基雄（ナム　キウン）と申します。</p>\r\n<p>私は韓国出身のソフトウェアエンジニアです。韓国のソウル大学で経営学とコンピューター工学を専攻しました。卒業直後にはNAVERで働いて、その後は他のところでプログラマや講師として働きました。2018年7月現在は東京で働いています。</p>\r\n<p>趣味はギター、PCゲーム、ドラマ、料理です。よろしくお願いします。</p>\r\n"
+
+---
+works:
+  columns:
+  - id
+  - created_at
+  - updated_at
+  - title
+  - desc
+  - link
+  - category
+  - order
+  - desc_japan
+  - category_japan
+  records: 
+  - - 1
+    - '2018-03-28 11:23:10.671914'
+    - '2018-06-27 00:10:48.20512'
+    - lib_calvin
+    - C++ implementation of fundamental algorithms and data structures. It is focused
+      primarily on performance,  and most of implemented functions are benchmarked
+      against other C++ libraries such as STL, boost, and Google's.
+    - ''
+    - algorithm
+    - '1'
+    - "\r\n基本的なアルゴリズムとデータ構造のC ++実装。主にパフォーマンスに重点を置いており、実装された関数のほとんどは、STL、Boost、Googleなどの他のC
+      ++ライブラリに対してベンチマークされています。"
+    - アルゴリズムの分析・具現化・最適化
+  - - 3
+    - '2018-03-28 11:26:41.228545'
+    - '2018-06-27 05:02:49.566969'
+    - algorithms-benchmark
+    - Rails based website showing the result of performance benchmarks of lib_calvin.
+      It is designed to provide effective visual representation of benchmark data,
+      so that the purpose of data, which is to compare algorithms on multiple dimensions,
+      is best achieved.
+    - "<a target=\"_blank\" href=\"http://bench.minami.im\">http://bench.minami.im</a><br>\r\n<a
+      target=\"_blank\" href=\"https://s3.ap-northeast-2.amazonaws.com/calvin-download/system_diagram+(algorithms-benchmark).pdf\">システム構成図</a>"
+    - Agorithm
+    - '5'
+    - lib_calvinプロジェクトの色んなアルゴリズムの具現化のパフォーマンスベンチマークの結果を示すRailsベースのWebサイトです。色んなアルゴリズムの具現化を複数の基準で比較し、そのデータを効果的な視覚表現で提供するように設計されています。lib_calvinプロジェクトのベンチマーク結果をRubyスクリプトを利用してPostgreSQLデータベースに伝送し、それをRailsウェブサーバでサービスしています。グラフはJavaScriptライブラリを使用して実装しました。
+    - 様々なアルゴリズム具現化の性能ベンチマーク
+  - - 4
+    - '2018-03-28 11:27:08.927441'
+    - '2018-06-27 02:29:01.717362'
+    - swordmaster
+    - Unity3d based RPG game in which many important elements of Unity engine have
+      been used. Player character and NPC's are pure 3d objects, so they are under
+      physics engine's influence. Each enemy's movement patterns are designed uniquely
+      so that the game is appropriately challanging.
+    - ''
+    - 3d game
+    - '8'
+    - Unityエンジンの多くの重要な要素が使用されているUnity3dベースのRPGゲームです。プレイヤーキャラクターとNPCは純粋な3Dオブジェクトなので、物理エンジンの影響を受けます。各敵の動きパターンは、ゲーマーに適切なチャレンジを与えるように設計されています。
+    - ''
+  - - 5
+    - '2018-03-28 11:27:51.827591'
+    - '2018-09-29 08:14:43.072936'
+    - drama-explorer
+    - Content based web application made with Rails. As the name 'explorer' suggests,
+      this website was designed to make it easy for users to navigate through dramas
+      without manually entering search keywords. To achieve this, I focused on the
+      tendency that many people like to watch dramas in which their favorite actors
+      take part. Being a responsive wep application makes it more attractive to be
+      able to explore dramas by just clicking.
+    - "<a target=\"_blank\" href=\"http://drama.minami.im\">http://drama.minami.im</a>\r\n"
+    - Web application
+    - '7'
+    - "<strong>※サイト進入しのログインにはIDと暗証番号に「minami」と「minami」を入力してください。全ての動画は実際見れますが、テスト用のみに使用するようお願いします。サイトや動画のリンクをネット等にシェアする行為はご遠慮お願いします。</strong><br>\r\nRailsで作成されたコンテンツベースのWebアプリケーションです。
+      「エクスプローラ」という名前が示すように、このウェブサイトは、手動で検索キーワードを入力することなく、ユーザーがドラマを簡単にナビゲートできるように設計されています。これを達成するために、多くの人が好きな俳優が参加するドラマを見たいという傾向に注目しました。応答性の高いウェブアプリケーションなので、クリックするだけでドラマを探索できるようになります。"
+    - ''
+  - - 6
+    - '2018-03-28 12:06:50.592182'
+    - '2018-09-07 02:00:12.180671'
+    - paiza
+    - Paiza is a Japanese job search and recruitement website specialized for software
+      developers. To give quantitative assessment to job seekers, the website offers
+      coding problem platform in which anybody can participate. It is necessary to
+      write correct and efficient code to pass the tests; especially so for its rank
+      S problems. This project contains solutions to all rank S problems, along with
+      test data and test code.
+    - "<a target=\"_blank\" href=\"https://paiza.jp/challenges\">Paizaサイト</a><br>\r\n\r\n<a
+      target=\"_blank\" href=\"https://s3.ap-northeast-2.amazonaws.com/calvin-download/calvincaulfield-paiza-df2acd94d369.zip\">ソースコード全体（Paizaの規約上、Githubには載せません）</a><br>\r\n\r\n\r\n<a
+      target=\"_blank\" href=\"https://s3.ap-northeast-2.amazonaws.com/calvin-download/%E6%BA%80%E7%82%B9%E7%94%BB%E9%9D%A2.zip\">満点結果</a><br>\r\n<a
+      target=\"_blank\" href=\"https://s3.ap-northeast-2.amazonaws.com/calvin-download/%E4%B8%8A%E4%BD%8D%E3%83%A9%E3%83%B3%E3%82%AF%E7%94%BB%E9%9D%A2.zip\">上位得点</a><br>\r\n<a
+      target=\"_blank\" href=\"https://s3.ap-northeast-2.amazonaws.com/calvin-download/S%E3%83%A9%E3%83%B3%E3%82%AF%E5%95%8F%E9%A1%8C%E5%85%A8%E4%BD%93%E5%88%86%E6%9E%90.xlsx\">問題分析</a>\r\n\r\n\r\n\r\n"
+    - Competitive coding
+    - '2'
+    - Paizaは、ソフトウェア開発者に特化した日本の求人サイトです。求職者に定量的な評価を与えるために、誰もが参加できるコーディングの問題のプラットフォームを提供します。テストに合格するためには、正確で効率的なコードを書く必要があります。特にランクSの問題ではそうです。このプロジェクトには、テストデータとテストコードとともに、すべてのランクS問題を解決するソリューションが含まれています。
+    - プログラミングコンテスト
+  - - 7
+    - '2018-04-06 09:44:47.647378'
+    - '2018-06-27 04:53:50.143592'
+    - digit-recognizer
+    - 'Prototype deep learning system to recognize hand written digit. I implemented
+      neural network logic from scratch in C++ using matrix interface by lib_calvin
+      (the source of this project is part of lib_calvin solution). I used <a href="http://yann.lecun.com/exdb/mnist/">MNIST</a>
+      data to train and test my neural network. Going over 97% accuracy is not much
+      difficult. '
+    - "<a target=\"_blank\" href=\"http://ai.minami.im/\">http://ai.minami.im/</a>\r\n"
+    - AI
+    - '4'
+    - 手書き数字を認識するためのディープランニングシステム。私は、lib_calvin（このプロジェクトのソースはlib_calvinソリューションの一部です）によってマトリックスインターフェイスを使用してC
+      ++で最初からニューラルネットワークロジックを実装しました。私は<a href="http://yann.lecun.com/exdb/mnist/">
+      MNIST </a>データを使用して神経ネットワークを訓練し、テストしました。 その結果、97％以上の精度を達成し、実際使って見るとアマゾンのMachine
+      Learningサービス以上の正確度を見せます。その上、速度においてはアマゾンよりはるかに速いです。
+    - AI（ニューラルネットワーク・機械学習）
+  - - 8
+    - '2018-04-06 10:18:44.222342'
+    - '2018-06-27 04:30:00.446745'
+    - diff
+    - Website for simple diff function. Diff logic was implemented in JavaScript by
+      myself, and CodeMirror was used for visualization.
+    - <a target="_blank" href="http://diff.minami.im">http://diff.minami.im</a>
+    - Algorithm
+    - '3'
+    - シンプルで使いやすい文字列比較機能(Diff)を提供するウェブサイトです。コアーロジックははJavaScriptで独自に実装され、CodeMirrorは視覚化に使用されました。
+    - ウェブアプリケーション
+  - - 9
+    - '2018-04-06 10:22:58.865323'
+    - '2018-06-27 04:42:23.396729'
+    - php-coursebook
+    - Php coursebook for beginners, written in Korean. Used Jquery for layout and
+      visual effects. Also provides PHP sandbox which shows rendered results real
+      time with AJAX, as a useful tool for learning the language.
+    - "<a target=\"_blank\" href=\"http://book.minami.im\">http://book.minami.im</a>\r\n"
+    - Education, Authoring
+    - '9'
+    - 韓国語で書かれた初心者のためのPHP教科書。レイアウトや視覚効果のためにJQueryを使用しました。言語を学ぶのに便利なツールとして、AJAXでレンダリングされた結果をリアルタイムに表示するPHPサンドボックスも提供しています。
+    - "教育用ウェブアプリケーション\r\n"

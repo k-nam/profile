@@ -16,14 +16,21 @@ ActiveRecord::Schema.define(version: 20180621013433) do
   enable_extension "plpgsql"
 
   create_table "biographies", force: :cascade do |t|
-    t.string "introduction"
+    t.text "introduction"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_ips", force: :cascade do |t|
+    t.string "ip"
+    t.decimal "num_total_view"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "welcomes", force: :cascade do |t|
     t.text "introduction"
-    t.string "portrait_url"
+    t.text "portrait_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "introduction_japan"
@@ -34,10 +41,10 @@ ActiveRecord::Schema.define(version: 20180621013433) do
     t.datetime "updated_at", null: false
     t.string "title"
     t.text "desc"
-    t.string "link"
+    t.text "link"
     t.string "category"
     t.decimal "order"
-    t.string "desc_japan"
+    t.text "desc_japan"
     t.string "category_japan"
   end
 
