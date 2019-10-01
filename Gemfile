@@ -66,3 +66,5 @@ gem 'chartjs-ror'
 gem "rack", ">= 2.0.6"
 
 gem 'yaml_db'
+
+gem 'rubyzip', '>= 1.3.0'
