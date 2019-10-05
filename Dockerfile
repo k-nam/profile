@@ -5,11 +5,11 @@ RUN apt update
 RUN apt install -y nodejs
 
 COPY Gemfile ./
-RUN bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java
 RUN bundle install
 
 COPY . .
 
-EXPOSE 3000
 
-CMD rails s
+EXPOSE 3002
+
+CMD rails s --binding 0.0.0.0 -p 3002
