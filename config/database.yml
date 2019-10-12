@@ -14,7 +14,7 @@ development:
   <<: *default
   adapter: mysql2
   database: profile
-  encoding: utf8
+  encoding: utf8mb4
   username: <%= ENV.fetch("DB_USER") %>
   password: <%= ENV.fetch("DB_PASSWD") %>
   host: <%= ENV.fetch("DB_HOST") %>
