@@ -1,8 +1,20 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: circleci/ruby:2.4.1
-    steps:
-      - checkout
-      - run: echo "A first hello"
+orbs:
+  aws-ecr: circleci/aws-ecr@0.0.2
+version: 2.1
+
+workflows:
+  my:
+    jobs:
+      - build-sample:
+          docker:
+            - image: circleci/ruby:2.4.1
+          steps:
+            - checkout
+            - run: echo "A first hello"
+      - aws-ecr/build-and-push-image:
+          account-url: 461691961615.dkr.ecr.us-east-1.amazonaws.com/profile
+          aws-access-key-id: AKIAWW7X4IEHSALOTDDG
+          aws-secret-access-key: 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
+          region: us-east-1
+          repo: profile
+          tag: 'latest'
