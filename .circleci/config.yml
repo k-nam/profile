@@ -22,4 +22,5 @@ workflows:
             - aws-ecs/deploy-service-update
           cluster: calvin
           task-definition: ${MY_APP_PREFIX}
+          launch-type: EC2
           awsvpc: false
