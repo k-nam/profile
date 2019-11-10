@@ -10,7 +10,7 @@ workflows:
     jobs:
       - aws-ecr/build-and-push-image:
           repo: ${MY_APP_PREFIX}
-          tag: ${CIRCLE_SHA1}
+          tag: latest
       - aws-ecs/deploy-service-update:
           requires:
             - aws-ecr/build-and-push-image
