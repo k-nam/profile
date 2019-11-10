@@ -14,6 +14,6 @@ workflows:
       - aws-ecs/deploy-service-update:
           requires:
             - aws-ecr/build-and-push-image
-          family: ${MY_APP_PREFIX}-service
+          family: ${MY_APP_PREFIX}
           cluster-name: calvin
           container-image-name-updates: 'container=${MY_APP_PREFIX}-service,tag=${CIRCLE_SHA1}'
