@@ -9,6 +9,5 @@ RUN apt update
 RUN apt install yarn
 
 COPY Gemfile Gemfile.lock ./
-RUN bundle install
 
 COPY . .
