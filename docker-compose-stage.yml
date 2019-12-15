@@ -1,14 +1,12 @@
-version: '3'
+version: "3"
 
 services:
   rails:
     build: .
     image: calvincaulfield/profile
     ports:
-      - ${PROFILE_PORT}:${PROFILE_PORT}
+      - 3002:3002
     network_mode: "host"
     restart: always
-    environment:
-      - DB_DATABASE=something
     env_file:
-      - ../.env-production
+      - env/.env-stage
