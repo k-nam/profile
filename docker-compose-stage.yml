@@ -3,6 +3,7 @@ version: "3"
 services:
   rails:
     build: .
+    container_name: profile
     image: calvincaulfield/profile
     ports:
       - 3002:3002
