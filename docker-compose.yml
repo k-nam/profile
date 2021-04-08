@@ -7,8 +7,7 @@ services:
     image: calvincaulfield/profile
     ports:
       - 3002:3002
-    command: bash -f ./start_docker.sh
-    network_mode: host
+    command: ./start_docker.sh
     restart: always
     environment:
       - RAILS_ENV=production
