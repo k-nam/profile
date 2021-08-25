@@ -4,8 +4,6 @@ services:
   rails:
     build: .
     image: calvincaulfield/profile
-    ports:
-      - 3002:3002
     command: ./start_docker.sh
     restart: always
     environment:
