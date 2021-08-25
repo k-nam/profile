@@ -3,7 +3,6 @@ version: "3"
 services:
   rails:
     build: .
-    container_name: profile
     image: calvincaulfield/profile
     ports:
       - 3002:3002
@@ -18,3 +17,4 @@ services:
       - PROFILE_PORT
       - SECRET_KEY_BASE
       - RAILS_SERVE_STATIC_FILES
+    network_mode: host
